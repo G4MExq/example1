@@ -17,5 +17,17 @@ connection.query('SELECT * FROM todolist', function (error, results, fields) {
   if (error) throw error;
     console.log('ผลลัพธ์: ', results);
 });
+
+connection.query('INSERT INTO todolist VALUES ("","ซื้อผัก",1,false,null,null)', function (error, results, fields) {
+  if (error) throw error;
+    console.log('ผลลัพธ์: ', results);
+});
+
+connection.query('UPDATE todolist SET todo_name = "พายายไปสวนสนุก" WHERE todo_id = 2', function (error, results, fields) {
+  if (error) throw error;
+    console.log('ผลลัพธ์: ', results);
+});
+
+
  
 connection.end();
